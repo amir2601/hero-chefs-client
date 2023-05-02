@@ -6,6 +6,8 @@ import {
 import Main from '../layout/Main';
 import Home from '../pages/Home/Home/Home';
 import Blog from './../pages/Home/Shared/Blog/Blog';
+import Details from '../layout/Details';
+import Recipe from '../pages/Recipe/Recipe';
 
 const router = createBrowserRouter([
     {
@@ -22,6 +24,16 @@ const router = createBrowserRouter([
         }
       ]
     },
+    {
+        path: "/details",
+        element: <Details></Details>,
+        children: [
+            {
+                path: ":id",
+                element: <Recipe></Recipe>
+            }
+        ]
+    }
   ]);
 
 export default router;
