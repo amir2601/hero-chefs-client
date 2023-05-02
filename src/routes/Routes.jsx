@@ -11,6 +11,7 @@ import ChefDetails from '../pages/ChefDetails/ChefDetails';
 import Error from '../pages/Error/Error';
 import Login from '../pages/Login/Login';
 import LoginLayout from '../layout/LoginLayout';
+import Register from '../pages/Register.jsx/Register';
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login></Login>
+            },
+            {
+                path: "/register",
+                element: <Register></Register>
             }
         ]
     },
