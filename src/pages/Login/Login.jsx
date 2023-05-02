@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
+    const location = useLocation()
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || "/home";
 
     const handleLogin = event => {
         event.preventDefault();
@@ -15,12 +18,13 @@ const Login = () => {
         form.reset();
 
         signIn(email, password)
-        .then(result => {
-            const loggedUser = result.user;
-        })
-        .catch(error => {
-            console.log(error);
-        })
+            .then(result => {
+                const loggedUser = result.user;
+                navigate(from, {replace: true})
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
     return (
@@ -46,7 +50,7 @@ const Login = () => {
                                     </label>
                                     <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                                     <label className="label">
-                                        <p className="label-text-alt">Don't have an account? <Link className='text-blue-400' to="/register">Create an account</Link></p>
+                                        <p className="label-text-alt">Don't have an account? <Link className='text-blue-400' to="/register" state={{from: {from}}} replace>Create an account</Link></p>
                                     </label>
                                 </div>
                                 <div className="form-control mt-6">
