@@ -9,7 +9,7 @@ const Footer = () => {
                     <p className="font-bold text-2xl">
                         Chefs Hero
                     </p>
-                    <p>Copyright © 2023 - All right reserved</p>
+                    <p>Copyright © Chefs-Hero by Riad 2023 - All right reserved</p>
                 </div>
                 <div>
                     <div className="grid grid-flow-col gap-4">

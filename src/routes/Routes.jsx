@@ -9,21 +9,22 @@ import Blog from './../pages/Home/Shared/Blog/Blog';
 import Chef from '../layout/Chef';
 import ChefDetails from '../pages/ChefDetails/ChefDetails';
 import Error from '../pages/Error/Error';
+import Login from '../pages/Login/Login';
+import LoginLayout from '../layout/LoginLayout';
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Main></Main>,
+        element: <LoginLayout></LoginLayout>,
         errorElement: <Error></Error>,
         children: [
             {
-                path: "/",
-                element: <Home></Home>,
-                loader: () => fetch(`http://localhost:5000/chef`)
-            },
-            {
                 path: "/blog",
                 element: <Blog></Blog>
+            },
+            {
+                path: "/login",
+                element: <Login></Login>
             }
         ]
     },
@@ -38,6 +39,12 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/chef/${params.id}`)
             }
         ]
+    },
+    {
+        path: "/home",
+        element: <Home></Home>,
+        errorElement: <Error></Error>,
+        loader: () => fetch(`http://localhost:5000/chef`)
     }
 ]);
 

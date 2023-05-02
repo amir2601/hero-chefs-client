@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ChefDetails = () => {
+    const [fav, setFav] = useState(false);
+    const [fav2, setFav2] = useState(false);
+    const [fav3, setFav3] = useState(false);
+
+    const handleFav = () => {
+        setFav(!fav);
+        toast("Favorite Added");
+    };
+    const handleFav2 = () => {
+        setFav2(!fav2);
+        toast("Favorite Added");
+    };
+    const handleFav3 = () => {
+        setFav3(!fav3);
+        toast("Favorite Added");
+    };
+
     const chefDetails = useLoaderData()
-    console.log(chefDetails);
     const { _id, name, bio, exp, likes, recipe_no, chef_img, recipe1, recipe2, recipe3 } = chefDetails;
 
     return (
@@ -29,7 +47,10 @@ const ChefDetails = () => {
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={recipe1.img} className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
-                        <h1 className="text-4xl font-bold mb-3">{recipe1.name}</h1>
+                        <div className='flex justify-between'>
+                            <h1 className="text-4xl font-bold mb-3">{recipe1.name}</h1>
+                            <button onClick={handleFav} disabled={fav} className="btn btn-primary">Add to Favorite</button>
+                        </div>
                         {
                             recipe1.ingredients.map(i => <li>{i}</li>)
                         }
@@ -46,7 +67,10 @@ const ChefDetails = () => {
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={recipe2.img} className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
-                        <h1 className="text-4xl font-bold mb-3">{recipe2.name}</h1>
+                        <div className='flex justify-between'>
+                            <h1 className="text-4xl font-bold mb-3">{recipe2.name}</h1>
+                            <button onClick={handleFav2} disabled={fav2} className="btn btn-primary">Add to Favorite</button>
+                        </div>
                         {
                             recipe2.ingredients.map(i => <li>{i}</li>)
                         }
@@ -63,7 +87,10 @@ const ChefDetails = () => {
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={recipe3.img} className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
-                        <h1 className="text-4xl font-bold mb-3">{recipe3.name}</h1>
+                        <div className='flex justify-between'>
+                            <h1 className="text-4xl font-bold mb-3">{recipe3.name}</h1>
+                            <button onClick={handleFav3} disabled={fav3} className="btn btn-primary">Add to Favorite</button>
+                        </div>
                         {
                             recipe3.ingredients.map(i => <li>{i}</li>)
                         }
@@ -76,6 +103,7 @@ const ChefDetails = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

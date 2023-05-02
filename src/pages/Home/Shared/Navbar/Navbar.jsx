@@ -19,12 +19,12 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><Link to="/"><a>Home</a></Link></li>
+                        <li><Link to="/home"><a>Home</a></Link></li>
                         <li><Link to="/blog"><a>Blog</a></Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Login</a>
+                    <Link to="/login"><a className="btn">Login</a></Link>
                 </div>
             </div>
         </div>
