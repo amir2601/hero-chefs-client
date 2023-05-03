@@ -14,7 +14,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='md:w-5/6 mx-auto px-3 lg:px-0'>
+        <div className='w-5/6 mx-auto'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -27,7 +27,7 @@ const Navbar = () => {
                             <p onClick={handleLogout} className="btn">Log Out</p>
                         </ul>
                     </div>
-                    <img className='h-16' src="https://i.ibb.co/cvmhDSH/cooking.png" alt="" />
+                    <img className='h-10 md:h-16' src="https://i.ibb.co/cvmhDSH/cooking.png" alt="" />
                     <Link to="/" className="btn btn-ghost normal-case font-bold text-3xl">Hero Chefs</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
