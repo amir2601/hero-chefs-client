@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         errorElement: <Error></Error>,
-        loader: () => fetch(`http://localhost:5000/chef`)
+        loader: () => fetch(`https://hero-chefs-server-amir2601.vercel.app/chef`)
     },
     {
         path: "/",
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             {
                 path: ":id",
                 element: <PrivateRoutes><ChefDetails></ChefDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/chef/${params.id}`)
+                loader: ({ params }) => fetch(`https://hero-chefs-server-amir2601.vercel.app/chef/${params.id}`)
             }
         ]
     }
