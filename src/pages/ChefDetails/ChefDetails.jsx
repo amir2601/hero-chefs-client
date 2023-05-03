@@ -43,7 +43,7 @@ const ChefDetails = () => {
 
             {/* recipe section */}
 
-            <div className="hero bg-blue-200 mt-8 md:w-5/6 mx-auto md:h-full rounded-lg">
+            <div className="hero bg-sky-100 shadow-xl mt-8 md:w-5/6 mx-auto md:h-full rounded-lg">
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={recipe1.img} className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
@@ -61,7 +61,7 @@ const ChefDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className="hero bg-blue-200 mt-8 md:w-5/6 mx-auto md:h-full rounded-lg">
+            <div className="hero bg-sky-100 shadow-xl mt-8 md:w-5/6 mx-auto md:h-full rounded-lg">
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={recipe2.img} className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
@@ -79,7 +79,7 @@ const ChefDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className="hero bg-blue-200 mt-8 md:w-5/6 mx-auto md:h-full rounded-lg">
+            <div className="hero bg-sky-100 shadow-xl mt-8 md:w-5/6 mx-auto md:h-full rounded-lg">
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={recipe3.img} className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
