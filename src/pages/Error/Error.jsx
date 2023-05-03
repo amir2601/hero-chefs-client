@@ -14,7 +14,7 @@ const Error = () => {
                             You are all alone here
                         </h1>
                         {/* <button className='bg-white text-black btn mt-14'></button> */}
-                        <Link to="/home"><h1 className='bg-white text-black text-lg font-semibold py-2 px-4 rounded-lg mt-14'>Back To Home</h1></Link>
+                        <Link to="/"><h1 className='bg-white text-black text-lg font-semibold py-2 px-4 rounded-lg mt-14'>Back To Home</h1></Link>
                         <p className="font-extrabold text-8xl my-20 text-white animate-bounce">
                             404
                         </p>

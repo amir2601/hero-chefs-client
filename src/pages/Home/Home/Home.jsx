@@ -7,7 +7,6 @@ import Footer from '../Shared/Footer/Footer';
 
 const Home = () => {
     const chefs = useLoaderData();
-    console.log(chefs);
 
     return (
         <div>

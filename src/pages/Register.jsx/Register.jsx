@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
+    const [error, setError] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.from || "/home";
+    const from = location.state?.from?.from || "/";
 
     const handleRegister = event => {
         event.preventDefault();
@@ -18,15 +20,31 @@ const Register = () => {
 
         console.log(name, email, password, photo);
 
+        if (password.length < 6) {
+            setError('Password Must Be 6 Characters or more');
+            return;
+        }
+
         createUser(email, password)
-        .then(result => {
-            const createdUser = result.user;
-            navigate(from, {replace: true})
-            form.reset()
-        })
-        .catch(error => {
-            console.log(error);
-        })
+            .then(result => {
+                const createdUser = result.user;
+                navigate(from, { replace: true })
+                form.reset()
+                setError('');
+
+                updateProfile(createdUser, {
+                    displayName: name, photoURL: photo
+                })
+                    .then(() => {
+                        
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+            })
+            .catch(error => {
+                setError(error.message)
+            })
     }
 
     return (
@@ -35,7 +53,7 @@ const Register = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Register</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <p className="py-6">{error}</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">

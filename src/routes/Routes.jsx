@@ -15,6 +15,13 @@ import Register from '../pages/Register.jsx/Register';
 import PrivateRoutes from './PrivateRoutes';
 
 const router = createBrowserRouter([
+    
+    {
+        path: "/",
+        element: <Home></Home>,
+        errorElement: <Error></Error>,
+        loader: () => fetch(`http://localhost:5000/chef`)
+    },
     {
         path: "/",
         element: <LoginLayout></LoginLayout>,
@@ -45,12 +52,6 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/chef/${params.id}`)
             }
         ]
-    },
-    {
-        path: "/home",
-        element: <Home></Home>,
-        errorElement: <Error></Error>,
-        loader: () => fetch(`http://localhost:5000/chef`)
     }
 ]);
 
