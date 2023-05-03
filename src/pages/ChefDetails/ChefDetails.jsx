@@ -59,6 +59,7 @@ const ChefDetails = () => {
                             <h4 className='text-lg font-bold'>Likes: {likes}</h4>
                             <h4 className='text-lg font-bold'>Numbers of recipes: {recipe_no}</h4>
                             <h4 className='text-lg font-bold'>Years of experience: {exp}</h4>
+                            <h4 className='text-lg font-bold'>Rating: {recipe1.rating}</h4>
                         </div>
                     </div>
                 </div>
@@ -79,6 +80,7 @@ const ChefDetails = () => {
                             <h4 className='text-lg font-bold'>Likes: {likes}</h4>
                             <h4 className='text-lg font-bold'>Numbers of recipes: {recipe_no}</h4>
                             <h4 className='text-lg font-bold'>Years of experience: {exp}</h4>
+                            <h4 className='text-lg font-bold'>Rating: {recipe2.rating}</h4>
                         </div>
                     </div>
                 </div>
@@ -99,6 +101,7 @@ const ChefDetails = () => {
                             <h4 className='text-lg font-bold'>Likes: {likes}</h4>
                             <h4 className='text-lg font-bold'>Numbers of recipes: {recipe_no}</h4>
                             <h4 className='text-lg font-bold'>Years of experience: {exp}</h4>
+                            <h4 className='text-lg font-bold'>Rating: {recipe3.rating}</h4>
                         </div>
                     </div>
                 </div>

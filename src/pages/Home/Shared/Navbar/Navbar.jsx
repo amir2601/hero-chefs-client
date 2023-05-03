@@ -14,7 +14,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='md:w-5/6 mx-auto'>
+        <div className='md:w-5/6 mx-auto px-3 lg:px-0'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -24,8 +24,10 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to="/"><p>Home</p></Link></li>
                             <li><Link to="/blog"><p>Blog</p></Link></li>
+                            <p onClick={handleLogout} className="btn">Log Out</p>
                         </ul>
                     </div>
+                    <img className='h-16' src="https://i.ibb.co/cvmhDSH/cooking.png" alt="" />
                     <Link to="/" className="btn btn-ghost normal-case font-bold text-3xl">Hero Chefs</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -39,7 +41,7 @@ const Navbar = () => {
                         <div className='tooltip tooltip-bottom' data-tip={user.displayName}>
                             <img className='rounded-full w-12 h-12' src={user.photoURL} />
                         </div>
-                        <p onClick={handleLogout} className="btn">Log Out</p>
+                        <p onClick={handleLogout} className="btn hidden lg:flex">Log Out</p>
                     </div> : <Link to="/login"><p className="btn">Login</p></Link>}
                 </div>
             </div>

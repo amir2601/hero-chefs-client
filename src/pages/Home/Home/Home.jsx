@@ -4,6 +4,8 @@ import ChefCard from './ChefCard';
 import Header from '../Shared/Header/Header';
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
+import Service from './Service';
+import Faq from './faq';
 
 const Home = () => {
     const chefs = useLoaderData();
@@ -17,6 +19,8 @@ const Home = () => {
                     chefs.map(chef => <ChefCard key={chef._id} chef={chef}></ChefCard>)
                 }
             </div>
+            <Service></Service>
+            <Faq></Faq>
             <Footer></Footer>
         </div>
     );
