@@ -25,7 +25,7 @@ const Login = () => {
     const handleGithubLogin = () => {
         githubLogin()
         .then(result => {
-            const loggedUser = result.user;
+            const loggedUser = result.user; 
             navigate(from, { replace: true })
             setError('');
         })

@@ -13,7 +13,7 @@ const Faq = () => {
                             What types of Bangladeshi cuisine do you specialize in?
                         </div>
                         <div className="collapse-content">
-                            <p>tabIndex={0} We specialize in traditional Bangladeshi dishes, including rice-based dishes, meat and vegetable curries, lentil soups, and more.</p>
+                            <p> We specialize in traditional Bangladeshi dishes, including rice-based dishes, meat and vegetable curries, lentil soups, and more.</p>
                         </div>
                     </div>
                     <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
@@ -21,7 +21,7 @@ const Faq = () => {
                             Do you offer catering services for events?
                         </div>
                         <div className="collapse-content">
-                            <p>tabIndex={0} Yes, We offer catering services for events, including weddings, corporate events, and private parties. I can create customized menus to fit your specific needs and preferences.</p>
+                            <p>Yes, We offer catering services for events, including weddings, corporate events, and private parties. I can create customized menus to fit your specific needs and preferences.</p>
                         </div>
                     </div>
                     <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
@@ -29,7 +29,7 @@ const Faq = () => {
                             Do you offer cooking classes?
                         </div>
                         <div className="collapse-content">
-                            <p>tabIndex={0} es, I offer cooking classes for individuals or small groups who want to learn how to cook traditional Bangladeshi dishes. The classes can be customized to fit your skill level and interests.</p>
+                            <p>Yes, We offer cooking classes for individuals or small groups who want to learn how to cook traditional Bangladeshi dishes. The classes can be customized to fit your skill level and interests.</p>
                         </div>
                     </div>
                     <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
@@ -37,7 +37,7 @@ const Faq = () => {
                             Can you accommodate dietary restrictions or preferences?
                         </div>
                         <div className="collapse-content">
-                            <p>tabIndex={0} Yes, I can accommodate various dietary restrictions and preferences, including vegetarian, vegan, gluten-free, and more. Please let me know your specific needs, and I will do my best to accommodate them.</p>
+                            <p>Yes, We can accommodate various dietary restrictions and preferences, including vegetarian, vegan, gluten-free, and more. Please let me know your specific needs, and I will do my best to accommodate them.</p>
                         </div>
                     </div>
                 </div>
