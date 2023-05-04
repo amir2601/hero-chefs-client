@@ -28,7 +28,7 @@ const ChefDetails = () => {
 
         <div>
             {/* Header Section */}
-            <div className="hero bg-base-300 md:w-5/6 mx-auto md:h-full ">
+            <div className="hero bg-base-300 md:w-5/6 mx-auto h-full ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={chef_img} className="max-w-sm rounded-lg shadow-2xl" />
                     <div>

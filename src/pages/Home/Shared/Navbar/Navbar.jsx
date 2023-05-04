@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../../provider/AuthProvider';
 
 const Navbar = () => {
@@ -27,13 +27,23 @@ const Navbar = () => {
                             <p onClick={handleLogout} className="btn">Log Out</p>
                         </ul>
                     </div>
-                    <img className='h-10 md:h-16' src="https://i.ibb.co/cvmhDSH/cooking.png" alt="" />
+                    <img className='h-16 hidden md:flex' src="https://i.ibb.co/cvmhDSH/cooking.png" alt="" />
                     <Link to="/" className="btn btn-ghost normal-case font-bold text-3xl">Hero Chefs</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><Link to="/"><p>Home</p></Link></li>
-                        <li><Link to="/blog"><p>Blog</p></Link></li>
+                        <li>
+                            <NavLink
+                                to="/"
+                                className={({ isActive, isPending }) => isActive ? "bg-white font-bold text-blue-500" : ""}
+                            >Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/blog"
+                                className={({ isActive, isPending }) => isActive ? "bg-white font-bold text-blue-500" : ""}
+                            >Blog</NavLink>
+                        </li>
                     </ul>
                 </div>
                 <div className="navbar-end">
