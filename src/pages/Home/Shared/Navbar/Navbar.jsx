@@ -48,8 +48,8 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {user ? <div className='flex gap-3'>
-                        <div className='tooltip tooltip-bottom' data-tip={user.displayName}>
-                            <img className='rounded-full w-12 h-12' src={user.photoURL} />
+                        <div className='tooltip tooltip-bottom' data-tip={user?.displayName}>
+                            <img className='rounded-full w-12 h-12' src={user?.photoURL} />
                         </div>
                         <p onClick={handleLogout} className="btn hidden lg:flex">Log Out</p>
                     </div> : <Link to="/login"><p className="btn">Login</p></Link>}
