@@ -18,7 +18,15 @@ const Register = () => {
         const password = form.password.value;
         const photo = form.photo.value;
 
-        console.log(name, email, password, photo);
+        if (email === '') {
+            setError('You can not register without email');
+            return
+        }
+
+        if (password === '') {
+            setError('You can not register without password');
+            return
+        }
 
         if (password.length < 6) {
             setError('Password Must Be 6 Characters or more');
@@ -53,7 +61,7 @@ const Register = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Please Register</h1>
-                        <p className="py-6">{error}</p>
+                        <p className="py-6 text-red-600">{error}</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
@@ -62,21 +70,21 @@ const Register = () => {
                                     <label className="label">
                                         <span className="label-text">Name</span>
                                     </label>
-                                    <input type="text" name='name' placeholder="name" className="input input-bordered" required />
+                                    <input type="text" name='name' placeholder="name" className="input input-bordered" />
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+                                    <input type="email" name='email' placeholder="email" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                                    <input type="password" name='password' placeholder="password" className="input input-bordered" />
                                     <label className="label">
                                         <span className="label-text">Photo Url</span>
                                     </label>
-                                    <input type="text" name='photo' placeholder="photo url" className="input input-bordered" required />
+                                    <input type="text" name='photo' placeholder="photo url" className="input input-bordered" />
                                     <label className="label">
                                         <p className="label-text-alt">Already have an account? <Link className='text-blue-400' to="/login">Login</Link></p>
                                     </label>
