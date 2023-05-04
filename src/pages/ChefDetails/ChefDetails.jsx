@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FaRegStar, FaStar } from 'react-icons/fa';
+import Rating from 'react-rating';
 import { useLoaderData } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -55,7 +57,16 @@ const ChefDetails = () => {
                         }
                         <p className="py-6"><small>{recipe1.cooking_method}</small></p>
                         <div className='md:flex justify-between items-center'>
-                            <h4 className='text-lg font-bold'>Rating: {recipe1.rating}</h4>
+                            <div>
+                                <Rating className='text-yellow-600'
+                                    placeholderRating={recipe1.rating}
+                                    emptySymbol={<FaRegStar></FaRegStar>}
+                                    placeholderSymbol={<FaStar></FaStar>}
+                                    fullSymbol={<FaStar></FaStar>}
+                                    readonly
+                                />
+                                <span className='text-lg font-bold ms-3'>Rating: {recipe1.rating}</span>
+                            </div>
                             <button onClick={handleFav} disabled={fav} className="btn btn-primary my-3 md:my-0">Add to Favorite</button>
                         </div>
                     </div>
@@ -73,7 +84,16 @@ const ChefDetails = () => {
                         }
                         <p className="py-6"><small>{recipe2.cooking_method}</small></p>
                         <div className='md:flex justify-between items-center'>
-                            <h4 className='text-lg font-bold'>Rating: {recipe2.rating}</h4>
+                            <div>
+                                <Rating className='text-yellow-600'
+                                    placeholderRating={recipe2.rating}
+                                    emptySymbol={<FaRegStar></FaRegStar>}
+                                    placeholderSymbol={<FaStar></FaStar>}
+                                    fullSymbol={<FaStar></FaStar>}
+                                    readonly
+                                />
+                                <span className='text-lg font-bold ms-3'>Rating: {recipe2.rating}</span>
+                            </div>
                             <button onClick={handleFav2} disabled={fav2} className="btn btn-primary my-3 md:my-0">Add to Favorite</button>
                         </div>
                     </div>
@@ -91,7 +111,16 @@ const ChefDetails = () => {
                         }
                         <p className="py-6"><small>{recipe3.cooking_method}</small></p>
                         <div className='md:flex justify-between items-center'>
-                            <h4 className='text-lg font-bold'>Rating: {recipe3.rating}</h4>
+                            <div>
+                                <Rating className='text-yellow-600'
+                                    placeholderRating={recipe3.rating}
+                                    emptySymbol={<FaRegStar></FaRegStar>}
+                                    placeholderSymbol={<FaStar></FaStar>}
+                                    fullSymbol={<FaStar></FaStar>}
+                                    readonly
+                                />
+                                <span className='text-lg font-bold ms-3'>Rating: {recipe3.rating}</span>
+                            </div>
                             <button onClick={handleFav3} disabled={fav3} className="btn btn-primary my-3 md:my-0">Add to Favorite</button>
                         </div>
                     </div>
