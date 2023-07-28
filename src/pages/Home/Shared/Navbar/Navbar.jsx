@@ -27,8 +27,10 @@ const Navbar = () => {
                             <p onClick={handleLogout} className="btn">Log Out</p>
                         </ul>
                     </div>
-                    <img className='h-16 hidden md:flex' src="https://i.ibb.co/cvmhDSH/cooking.png" alt="" />
-                    <Link to="/" className="btn btn-ghost normal-case font-bold text-3xl">Hero Chefs</Link>
+                    <Link className='flex items-center'>
+                        <img className='h-16 hidden md:flex' src="https://i.ibb.co/cvmhDSH/cooking.png" alt="" />
+                        <h2 to="/" className="ms-2 normal-case font-bold text-3xl">Hero Chefs</h2>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
