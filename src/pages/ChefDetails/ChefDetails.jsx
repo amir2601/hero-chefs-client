@@ -47,7 +47,7 @@ const ChefDetails = () => {
 
             <div className="hero bg-sky-100 shadow-xl mt-8 md:w-5/6 mx-auto md:h-full rounded-lg">
                 <div className="hero-content flex-col lg:flex-row">
-                    <img src={recipe1.img} className="rounded-lg shadow-2xl" />
+                    <img src={recipe1.img} className="rounded-lg md:w-2/6 shadow-2xl" />
                     <div>
                         <div className='flex justify-between'>
                             <h1 className="text-4xl font-bold mb-3">{recipe1.name}</h1>
@@ -74,7 +74,7 @@ const ChefDetails = () => {
             </div>
             <div className="hero bg-sky-100 shadow-xl mt-8 md:w-5/6 mx-auto md:h-full rounded-lg">
                 <div className="hero-content flex-col lg:flex-row">
-                    <img src={recipe2.img} className="rounded-lg shadow-2xl" />
+                    <img src={recipe2.img} className="rounded-lg md:w-2/6 shadow-2xl" />
                     <div>
                         <div className='flex justify-between'>
                             <h1 className="text-4xl font-bold mb-3">{recipe2.name}</h1>
@@ -101,7 +101,7 @@ const ChefDetails = () => {
             </div>
             <div className="hero bg-sky-100 shadow-xl mt-8 md:w-5/6 mx-auto md:h-full rounded-lg">
                 <div className="hero-content flex-col lg:flex-row">
-                    <img src={recipe3.img} className="rounded-lg shadow-2xl" />
+                    <img src={recipe3.img} className="rounded-lg md:w-2/6 shadow-2xl" />
                     <div>
                         <div className='flex justify-between'>
                             <h1 className="text-4xl font-bold mb-3">{recipe3.name}</h1>
