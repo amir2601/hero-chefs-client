@@ -1,29 +1,36 @@
-import React from 'react';
-import LazyLoad from 'react-lazy-load';
-import { Link } from 'react-router-dom';
+import React from "react";
+import LazyLoad from "react-lazy-load";
+import { Link } from "react-router-dom";
+import { BiLike } from "react-icons/bi";
 
 const ChefCard = ({ chef }) => {
-    const { _id, name, exp, likes, recipe_no, chef_img } = chef;
-    return (
-        <div>
-            <div className="card w-full bg-base-200 shadow-xl">
-                <figure className="px-10 pt-10 md:p-4">
-                    <LazyLoad height={200} width={200} threshold={1}>
-                        <img src={chef_img} alt="Shoes" className="rounded-xl" />
-                    </LazyLoad>
-                </figure>
-                <div className="card-body items-center text-center">
-                    <h2 className="card-title">Name: {name}</h2>
-                    <div>
-                        <p>Years of experience: {exp}</p>
-                        <p>Numbers of recipes: {recipe_no}</p>
-                        <p>Likes: {likes}</p>
-                    </div>
-                    <Link to={`/chef/${_id}`}><button className="btn btn-primary">View Recipes</button></Link>
-                </div>
+  const { _id, name, exp, likes, recipe_no, chef_img } = chef;
+  return (
+    <div className="mx-auto">
+      <div className="card md:w-96 bg-base-100 shadow-xl">
+        <figure>
+          <img src={chef_img} alt="Chef Image" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">{name}</h2>
+
+          <div className="card-actions justify-between">
+            <div className="badge badge-outline">Experience {exp} Years</div>
+            <div className="badge badge-outline">{recipe_no} Recipe</div>
+            <div className="flex items-center gap-2">
+              <p>
+                <BiLike></BiLike>
+              </p>
+              <p>{likes}</p>
             </div>
+          </div>
+          <Link to={`/chef/${_id}`} className="md:mt-4">
+            <button className="btn btn-outline btn-sm">View Recipes</button>
+          </Link>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default ChefCard;

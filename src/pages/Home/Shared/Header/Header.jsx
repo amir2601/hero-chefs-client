@@ -7,8 +7,8 @@ const Header = () => {
                 <div className="hero-overlay bg-opacity-70"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
-                        <h1 className="mb-5 text-7xl font-bold">Hero Chefs</h1>
-                        <p className="mb-5 text-lg">We believe that cooking should be enjoyable and accessible to everyone, which is why we create recipes that are simple, yet impressive.</p>
+                        <h1 className="mb-5 text-2xl md:text-7xl font-bold">Hero Chefs</h1>
+                        <p className="mb-5 md:text-lg">We believe that cooking should be enjoyable and accessible to everyone, which is why we create recipes that are simple, yet impressive.</p>
                     </div>
                 </div>
             </div>

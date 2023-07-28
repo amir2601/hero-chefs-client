@@ -29,7 +29,7 @@ const Navbar = () => {
                     </div>
                     <Link className='flex items-center'>
                         <img className='h-16 hidden md:flex' src="https://i.ibb.co/cvmhDSH/cooking.png" alt="" />
-                        <h2 to="/" className="ms-2 normal-case font-bold text-3xl">Hero Chefs</h2>
+                        <h2 to="/" className="ms-2 normal-case font-bold md:text-3xl">Hero Chefs</h2>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
