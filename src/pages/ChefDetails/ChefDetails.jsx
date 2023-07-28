@@ -52,9 +52,11 @@ const ChefDetails = () => {
                         <div className='flex justify-between'>
                             <h1 className="text-4xl font-bold mb-3">{recipe1.name}</h1>
                         </div>
-                        {
-                            recipe1.ingredients.map(i => <li>{i}</li>)
-                        }
+                        <div className='grid md:grid-cols-2'>
+                            {
+                                recipe1.ingredients.map(i => <li>{i}</li>)
+                            }
+                        </div>
                         <p className="py-6"><small>{recipe1.cooking_method}</small></p>
                         <div className='md:flex justify-between items-center'>
                             <div>
@@ -67,7 +69,7 @@ const ChefDetails = () => {
                                 />
                                 <span className='text-lg font-bold ms-3'>Rating: {recipe1.rating}</span>
                             </div>
-                            <button onClick={handleFav} disabled={fav} className="btn btn-primary my-3 md:my-0">Add to Favorite</button>
+                            <button onClick={handleFav} disabled={fav} className="btn btn-sm btn-outline my-3 md:my-0">Add to Favorite</button>
                         </div>
                     </div>
                 </div>
@@ -79,9 +81,11 @@ const ChefDetails = () => {
                         <div className='flex justify-between'>
                             <h1 className="text-4xl font-bold mb-3">{recipe2.name}</h1>
                         </div>
-                        {
-                            recipe2.ingredients.map(i => <li>{i}</li>)
-                        }
+                        <div className='grid md:grid-cols-2'>
+                            {
+                                recipe2.ingredients.map(i => <li>{i}</li>)
+                            }
+                        </div>
                         <p className="py-6"><small>{recipe2.cooking_method}</small></p>
                         <div className='md:flex justify-between items-center'>
                             <div>
@@ -94,7 +98,7 @@ const ChefDetails = () => {
                                 />
                                 <span className='text-lg font-bold ms-3'>Rating: {recipe2.rating}</span>
                             </div>
-                            <button onClick={handleFav2} disabled={fav2} className="btn btn-primary my-3 md:my-0">Add to Favorite</button>
+                            <button onClick={handleFav2} disabled={fav2} className="btn btn-sm btn-outline my-3 md:my-0">Add to Favorite</button>
                         </div>
                     </div>
                 </div>
@@ -106,9 +110,11 @@ const ChefDetails = () => {
                         <div className='flex justify-between'>
                             <h1 className="text-4xl font-bold mb-3">{recipe3.name}</h1>
                         </div>
-                        {
-                            recipe3.ingredients.map(i => <li>{i}</li>)
-                        }
+                        <div className='grid md:grid-cols-2'>
+                            {
+                                recipe3.ingredients.map(i => <li>{i}</li>)
+                            }
+                        </div>
                         <p className="py-6"><small>{recipe3.cooking_method}</small></p>
                         <div className='md:flex justify-between items-center'>
                             <div>
@@ -121,7 +127,7 @@ const ChefDetails = () => {
                                 />
                                 <span className='text-lg font-bold ms-3'>Rating: {recipe3.rating}</span>
                             </div>
-                            <button onClick={handleFav3} disabled={fav3} className="btn btn-primary my-3 md:my-0">Add to Favorite</button>
+                            <button onClick={handleFav3} disabled={fav3} className="btn btn-sm btn-outline my-3 md:my-0">Add to Favorite</button>
                         </div>
                     </div>
                 </div>
